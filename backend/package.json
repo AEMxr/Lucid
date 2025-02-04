@@ -1,0 +1,13 @@
+{
+  "name": "lucid-backend",
+  "version": "1.0.0",
+  "description": "Lucid AI-powered relationship platform backend",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "openai": "^4.82.0"
+  }
+}

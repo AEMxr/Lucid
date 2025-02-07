@@ -13,7 +13,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black opacity-75 filter blur-lg"></div>
       <div className="relative text-center px-6 py-8">
         <motion.h1
-          className="text-6xl font-bold text-white mb-4"
+          className="text-6xl font-bold bg-gradient-to-r from-[#00D4FF] to-[#FF66CC] bg-clip-text text-transparent mb-4"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -31,13 +31,13 @@ export default function Hero() {
         </motion.p>
         <div className="space-x-4">
           <motion.button
-            className="bg-cyan-500 text-white px-8 py-3 rounded-full hover:bg-cyan-600 transition transform hover:scale-105"
+            className="bg-gradient-to-r from-[#00D4FF] to-[#FF66CC] text-white px-8 py-3 rounded-full hover:bg-cyan-600 transition transform hover:scale-105"
             whileHover={{ scale: 1.1 }}
           >
             Get Early Access Now
           </motion.button>
           <motion.button
-            className="border border-cyan-500 text-cyan-500 px-8 py-3 rounded-full hover:bg-cyan-500 hover:text-white transition transform hover:scale-105"
+            className="border border-cyan-500 text-cyan-500 px-8 py-3 rounded-full hover:bg-gradient-to-r from-[#00D4FF] to-[#FF66CC] hover:text-white transition transform hover:scale-105"
             whileHover={{ scale: 1.1 }}
           >
             See How It Works

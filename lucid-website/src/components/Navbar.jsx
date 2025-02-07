@@ -11,7 +11,7 @@ export default function Navbar() {
           <img
             src="/images/LucidLogo.png"
             alt="Lucid Logo"
-            className="h-8 w-auto" // Adjust size as needed
+            className="h-10 w-auto"
           />
         </div>
         <ul className="flex space-x-6">

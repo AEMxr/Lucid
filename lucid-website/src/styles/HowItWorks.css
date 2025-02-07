@@ -1,0 +1,17 @@
+.pulsate {
+  transition: box-shadow 0.3s ease;
+}
+
+.pulsate:hover {
+  animation: pulsate 2.3s infinite;
+}
+
+@keyframes pulsate {
+  0%,
+  100% {
+    box-shadow: 0 0 15px 5px rgba(255, 102, 204, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px 10px rgba(0, 212, 255, 0.5);
+  }
+}

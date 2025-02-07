@@ -1,7 +1,9 @@
+import React from "react";
+
 export default function Blockchain() {
   return (
     <section className="py-20 bg-purple-900">
-      <div className="container mx-auto text-center">
+      <div className="container mx-auto text-center px-6">
         <h2 className="text-4xl font-bold text-cyan-400 mb-8">
           Blockchain & Trust System
         </h2>

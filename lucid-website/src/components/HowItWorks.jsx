@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function HowItWorks() {
   const steps = [
     {
@@ -20,7 +22,7 @@ export default function HowItWorks() {
 
   return (
     <section className="py-20 bg-purple-900">
-      <div className="container mx-auto text-center">
+      <div className="container mx-auto text-center px-6">
         <h2 className="text-4xl font-bold text-cyan-400 mb-8">How It Works</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {steps.map((step, index) => (

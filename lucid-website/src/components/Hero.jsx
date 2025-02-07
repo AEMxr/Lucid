@@ -10,7 +10,7 @@ export default function Hero() {
           "url('https://storage.googleapis.com/uxpilot-auth.appspot.com/a04128c538-688366594f764559f8d8.png')",
       }}
     >
-      <div className="absolute inset-0 bg-black opacity-65 filter blur-lg"></div>
+      <div className="absolute inset-0 bg-black opacity-75 filter blur-lg"></div>
       <div className="relative text-center px-6 py-8">
         <motion.h1
           className="text-6xl font-bold text-white mb-4"

@@ -24,10 +24,10 @@ export default function Hero() {
         const scrollPosition = window.scrollY;
         const videoDuration = videoRef.current.duration;
         const scrollMax = document.body.scrollHeight - window.innerHeight;
-        const frame = ((scrollPosition / scrollMax) * videoDuration) / 1.75;
+        const frame = (scrollPosition / scrollMax) * videoDuration;
         videoRef.current.currentTime = frame;
       }
-    }, 75); // Adjust the throttle limit as needed
+    }, 75);
 
     window.addEventListener("scroll", handleScroll);
 
@@ -37,17 +37,19 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="video-container">
+    <div
+      className="video-container relative overflow-hidden custom-gradient"
+      style={{ height: "300vh" }}
+    >
       <video
         ref={videoRef}
-        className="video-background"
+        className="video-background w-full h-full object-cover"
         src="../public/images/videos/romance1.mp4"
         type="video/mp4"
         muted
         playsInline
       />
       <section className="hero-section relative h-screen flex items-center justify-center">
-        {/* <div className="absolute inset-0 bg-black opacity-75 filter blur-lg"></div> */}
         <div className="relative text-center px-6 py-8">
           <motion.h1
             className="text-6xl font-bold bg-gradient-to-r from-[#00D4FF] to-[#FF66CC] bg-clip-text text-transparent mb-4"
@@ -82,7 +84,8 @@ export default function Hero() {
           </div>
         </div>
       </section>
-      <section className="how-it-works-section relative h-screen flex items-center justify-center">
+
+      <section className="how-it-works-section min-h-screen flex items-center justify-center mb-[100vh]">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-5xl font-extrabold text-transparent bg-gradient-to-r from-[#00D4FF] to-[#FF66CC] bg-clip-text mb-12">
             Discover Your Path to Connection
@@ -96,7 +99,11 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              style={{ boxShadow: "0 0 10px 2px rgba(255, 255, 255, 0.3)" }}
+              style={{
+                background:
+                  "linear-gradient(to bottom right, rgba(31, 27, 36, 0.8), rgba(45, 42, 53, 0.8))",
+                boxShadow: "0 0 10px 2px rgba(255, 255, 255, 0.3)",
+              }}
             >
               <svg
                 className="w-20 h-20 mx-auto mb-6 text-[#00D4FF]"
@@ -129,7 +136,11 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              style={{ boxShadow: "0 0 10px 2px rgba(255, 255, 255, 0.3)" }}
+              style={{
+                background:
+                  "linear-gradient(to bottom right, rgba(31, 27, 36, 0.8), rgba(45, 42, 53, 0.8))",
+                boxShadow: "0 0 10px 2px rgba(255, 255, 255, 0.3)",
+              }}
             >
               <svg
                 className="w-20 h-20 mx-auto mb-6 text-[#00D4FF]"
@@ -162,7 +173,11 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              style={{ boxShadow: "0 0 10px 2px rgba(255, 255, 255, 0.3)" }}
+              style={{
+                background:
+                  "linear-gradient(to bottom right, rgba(31, 27, 36, 0.8), rgba(45, 42, 53, 0.8))",
+                boxShadow: "0 0 10px 2px rgba(255, 255, 255, 0.3)",
+              }}
             >
               <svg
                 className="w-20 h-20 mx-auto mb-6 text-[#FF66CC]"
@@ -198,6 +213,7 @@ export default function Hero() {
           </div>
         </div>
       </section>
+      <div className="h-screen"></div>
     </div>
   );
 }

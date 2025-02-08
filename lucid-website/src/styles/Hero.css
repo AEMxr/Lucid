@@ -1,0 +1,22 @@
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 200vh; /* Adjust height to cover both sections */
+  overflow: hidden;
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Ensure the video is behind the content */
+}
+
+.hero-section,
+.how-it-works-section {
+  position: relative;
+  z-index: 1; /* Ensure content is above the video */
+}

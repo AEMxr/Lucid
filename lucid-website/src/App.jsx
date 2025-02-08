@@ -12,7 +12,6 @@ export default function App() {
     <div>
       <Navbar />
       <Hero />
-      <HowItWorks />
       <AIAvatars />
       <Blockchain />
       <Milestones />

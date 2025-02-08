@@ -1,36 +1,38 @@
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import "../styles/Hero.css"; // Import any necessary CSS
+import "../styles/Hero.css";
 
 export default function Hero() {
   const videoRef = useRef(null);
-  const animationFrameRef = useRef(null);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const throttle = (func, limit) => {
+      let inThrottle;
+      return function () {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+          func.apply(context, args);
+          inThrottle = true;
+          setTimeout(() => (inThrottle = false), limit);
+        }
+      };
+    };
+
+    const handleScroll = throttle(() => {
       if (videoRef.current) {
         const scrollPosition = window.scrollY;
         const videoDuration = videoRef.current.duration;
         const scrollMax = document.body.scrollHeight - window.innerHeight;
-        const frame = (scrollPosition / scrollMax) * videoDuration;
-
-        // Use requestAnimationFrame for smoother updates
-        if (animationFrameRef.current) {
-          cancelAnimationFrame(animationFrameRef.current);
-        }
-        animationFrameRef.current = requestAnimationFrame(() => {
-          videoRef.current.currentTime = frame;
-        });
+        const frame = ((scrollPosition / scrollMax) * videoDuration) / 1.75;
+        videoRef.current.currentTime = frame;
       }
-    };
+    }, 75); // Adjust the throttle limit as needed
 
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      if (animationFrameRef.current) {
-        cancelAnimationFrame(animationFrameRef.current);
-      }
     };
   }, []);
 

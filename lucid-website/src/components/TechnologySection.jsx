@@ -60,23 +60,10 @@ export default function TechnologySection() {
       <div className="relative z-2 py-48 bg-black">
         <div className="container mx-auto text-center px-6">
           <motion.h2
-            className="text-5xl font-bold mb-12 px-8 py-4"
+            className="text-6xl font-bold mb-6 bg-gradient-to-r from-[#00D4FF] to-[#FF66CC] bg-clip-text text-transparent"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            style={{
-              WebkitTextStroke: "1px rgba(0, 0, 0, 0.8)",
-              textShadow: `
-      0 0 15px rgba(255, 102, 204, 0.7),
-      0 0 25px rgba(0, 212, 255, 0.7)
-    `,
-              backgroundColor: "rgba(0, 0, 0, 0.3)",
-              borderRadius: "16px",
-              filter: "brightness(1.2) saturate(1.4)",
-              background: "linear-gradient(to right, #00D4FF, #FF66CC)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
           >
             Blockchain & Trust System
           </motion.h2>
@@ -86,7 +73,7 @@ export default function TechnologySection() {
               className="p-8 bg-black/40 backdrop-blur-xl rounded-2xl border border-cyan-500/20 shadow-xl hover:shadow-cyan-500/20"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               whileHover={{ scale: 1.05 }}
             >
               <h3 className="text-2xl font-bold bg-gradient-to-r from-[#00D4FF] to-[#FF66CC] bg-clip-text text-transparent mb-4">
@@ -153,7 +140,7 @@ export default function TechnologySection() {
             ].map((title, index) => (
               <motion.div
                 key={index}
-                className="p-8 bg-black/40 backdrop-blur-xl rounded-2xl border border-cyan-500/20 shadow-xl hover:shadow-cyan-500/20"
+                className="p-8 bg-white/40 backdrop-blur-xl rounded-2xl border border-cyan-500/20 shadow-xl hover:shadow-cyan-500/20"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}

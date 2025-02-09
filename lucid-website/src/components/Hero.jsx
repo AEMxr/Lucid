@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import "../styles/Hero.css";
+import MatrixRain from "./Matrix.jsx";
 
 export default function Hero() {
   const videoRef = useRef(null);

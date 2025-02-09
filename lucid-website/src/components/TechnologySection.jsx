@@ -1,86 +1,14 @@
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-
-const MatrixRain = () => {
-  const canvasRef = useRef(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext("2d");
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight * 2;
-
-    const binary = "10";
-    const fontSize = 14;
-    const columns = canvas.width / fontSize;
-    const drops = new Array(Math.floor(columns))
-      .fill(1)
-      .map(() => Math.random() * -100);
-
-    function draw() {
-      const gradient = ctx.createLinearGradient(0, 0, 0, 100);
-      gradient.addColorStop(0, "rgba(255, 255, 255, 1)");
-      gradient.addColorStop(1, "rgba(255, 255, 255, 0)");
-
-      ctx.fillStyle = "rgba(255, 255, 255, 0.03)";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-      ctx.font = `${fontSize}px monospace`;
-
-      for (let i = 0; i < drops.length; i++) {
-        const text = binary.charAt(Math.random() * binary.length);
-        const x = i * fontSize;
-        const y = drops[i] * fontSize;
-
-        if (i % 2 === 0) {
-          ctx.fillStyle = "#00D4FF";
-        } else {
-          ctx.fillStyle = "#FF66CC";
-        }
-
-        ctx.fillText(text, x, y);
-
-        if (y > canvas.height && Math.random() > 0.975) {
-          drops[i] = 0;
-        }
-        drops[i]++;
-      }
-
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, 100);
-    }
-
-    const interval = setInterval(draw, 33);
-
-    const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight * 2;
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      clearInterval(interval);
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  return (
-    <canvas
-      ref={canvasRef}
-      className="absolute inset-0"
-      style={{ opacity: 0.4, zIndex: 0 }}
-    />
-  );
-};
+import MatrixRain from "./Matrix.jsx";
 
 export default function TechnologySection() {
   return (
-    <div className="relative min-h-screen bg-gradient-to-b from-white via-white via-5% to-black">
+    <div className="relative min-h-screen" style={{ overflow: "hidden" }}>
       <MatrixRain />
 
       {/* AI Avatars Section */}
-      <div className="relative z-10 py-60">
+      <div className="relative z-2 py-60 bg-white">
         <div className="container mx-auto flex flex-col md:flex-row items-center px-6">
           <motion.div
             className="md:w-1/2 text-center md:text-left mb-8 md:mb-0"
@@ -129,7 +57,7 @@ export default function TechnologySection() {
       </div>
 
       {/* Blockchain Section */}
-      <div className="relative z-10 py-48">
+      <div className="relative z-2 py-48 bg-black">
         <div className="container mx-auto text-center px-6">
           <motion.h2
             className="text-5xl font-bold mb-12 px-8 py-4"
@@ -205,7 +133,7 @@ export default function TechnologySection() {
       </div>
 
       {/* Milestones Section */}
-      <div className="relative z-10 py-48">
+      <div className="relative z-2 py-60 bg-white">
         <div className="container mx-auto text-center px-6">
           <motion.h2
             className="text-5xl font-bold bg-gradient-to-r from-[#00D4FF] to-[#FF66CC] bg-clip-text text-transparent mb-12"

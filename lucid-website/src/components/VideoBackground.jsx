@@ -6,6 +6,7 @@ export default function VideoBackground() {
     "/images/videos/couple1.mp4",
     "/images/videos/couple2.mp4",
     "/images/videos/couple3.mp4",
+    "/images/videos/couple4.mp4",
   ];
 
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);

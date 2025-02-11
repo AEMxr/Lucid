@@ -294,17 +294,19 @@ function Earth() {
     const testimonial = testimonialData[city];
 
     return (
-      <div className="bg-black/80 backdrop-blur-md p-6 rounded-xl border border-white/20 text-white max-w-sm">
-        <h3 className="text-xl font-bold mb-2">{city}</h3>
-        <p className="text-lg font-semibold">{testimonial.name}</p>
-        <p className="mt-2 italic">"{testimonial.quote}"</p>
-        <p className="mt-1 text-sm opacity-75">{testimonial.role}</p>
+      <div className="bg-black/80 backdrop-blur-md p-8 rounded-xl border border-white/20 text-white min-w-[350px] max-w-md">
+        <h3 className="text-2xl font-bold mb-3">{city}</h3>
+        <p className="text-xl font-semibold mb-2">{testimonial.name}</p>
+        <p className="mt-4 italic text-lg leading-relaxed">
+          "{testimonial.quote}"
+        </p>
+        <p className="mt-3 text-sm opacity-75">{testimonial.role}</p>
         <button
           onClick={(e) => {
             e.stopPropagation();
             setSelectedCity(null);
           }}
-          className="absolute top-2 right-2 text-white/60 hover:text-white text-xl font-bold"
+          className="absolute top-4 right-4 text-white/60 hover:text-white text-2xl font-bold"
         >
           ×
         </button>

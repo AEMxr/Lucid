@@ -1,0 +1,62 @@
+Okay, I see the full picture now. Here’s the **real breakdown of the risks and flaws** in this plan:  
+
+---
+
+### **1. The Whole Plan is Built on Volume That May Not Exist**  
+He’s saying, *“If our daily volume is 100k, we make 5k per day.”* But...  
+- **What if it’s not 100k?** Most tokens **never** hit that level of daily trading.  
+- **What if it’s only 10k?** Then you’re making just **$500/day**—which isn’t much if you need to cover server costs, salaries, and marketing.  
+- **What if trading stops?** Your income goes to zero.  
+
+---
+
+### **2. The Liquidity Lock is a Double-Edged Sword**  
+- **85% of funds** (plus $8-10k) go to a liquidity pool **that you can’t touch** until the lock expires.  
+- If things go wrong, **you have no way to access that money** to pivot, reinvest, or fix issues.  
+- **Burning liquidity** sounds cool, but it means the money is **gone forever**—no safety net.  
+
+---
+
+### **3. The Only Way to Profit is From Taxes—But That’s a Risky Model**  
+- Most **successful** projects **don’t** rely on taxes to generate revenue.  
+- **High tax rates** (5%+ per trade) **scare off investors** because it makes trading costly.  
+- If trading slows down, **you make nothing**.  
+
+---
+
+### **4. You and the Team Get Paid Last (if at all)**  
+- **5%** of the total supply is reserved for you and the team.  
+- But **you can’t sell those tokens** because it would tank the price.  
+- That means **you don’t actually have any guaranteed income**—you’re just sitting on assets **hoping** they go up.  
+
+---
+
+### **5. How Do You Keep the Price from Tanking?**  
+Right now, **this is essentially a meme token model** without calling it a meme token.  
+- **Price tanks if**:  
+  - Early buyers sell for profit.  
+  - Volume dries up.  
+  - There’s no real **use case** for the token.  
+
+**Without a way to generate constant demand**, this is just another crypto that pumps and dumps.  
+
+---
+
+### **What’s the Smarter Play?**  
+Instead of **locking up 85% in liquidity**, do something like:  
+- **60% liquidity pool** (so it’s stable but not locked to the point of no return).  
+- **20% reserve fund** (for actual business operations).  
+- **10% development/marketing** (so you can build without waiting for taxes).  
+- **10% early team payment** (so you get paid upfront instead of hoping).  
+
+This way, **you have actual funds to work with** and aren’t just praying for trading volume.  
+
+---
+
+### **Final Question: Why This Route?**  
+Why **force** the revenue model through token taxes? You could just:  
+- **Sell the token at launch with a reasonable fee** to fund development.  
+- **Offer premium services** on Beyond Swipes for direct revenue.  
+- **Use tokens as a feature**, not as the entire foundation of the business.  
+
+The current plan is **gambling on trading volume**—and that’s a dangerous bet.

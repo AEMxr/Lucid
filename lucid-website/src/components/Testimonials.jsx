@@ -3,6 +3,7 @@ import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { OrbitControls, Html } from "@react-three/drei";
 import { TextureLoader } from "three";
 import * as THREE from "three";
+import { motion } from "framer-motion";
 
 const testimonialData = {
   "New York": {
@@ -355,13 +356,18 @@ function Earth() {
 
 export default function Testimonials() {
   return (
-    <section className="py-20 bg-black">
-      <div className="container mx-auto text-center px-6">
-        <h2 className="text-4xl font-bold text-white mb-16">
-          What Users Are Saying Worldwide
-        </h2>
+    <section className="h-screen bg-black">
+      <div className="container mx-auto text-center px-6 h-full flex flex-col">
+        <motion.h2
+          className="text-6xl font-bold bg-gradient-to-r from-[#00D4FF] to-[#FF66CC] bg-clip-text text-transparent mt-16 mb-8"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          Global Love Stories
+        </motion.h2>
 
-        <div className="relative h-[600px]">
+        <div className="relative flex-1">
           <Suspense
             fallback={
               <div className="text-white text-2xl">
